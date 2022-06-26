@@ -165,6 +165,98 @@ Para a inserção de imagens na página, podemos utilizar o elemento "img".
 	atributos:
 	<img src="Caminho_da_imagem"> OBRIGATÓRIO
 	<img alt="Descrição">
+##
+Para adição de listas no site, o HTML traz os elementos "ul" e "ol" e o que difere entre os dois é a importância da ordenação os componentes da lista. O "ol" ressalta a importância da ordenação de cada item da lista, diferentemente do "ul". o "li" é um item dessa lista.
+
+	<ul>
+	item 1
+	item 2
+
+	<ol>
+	1. item 1
+	2. item 3
+
+	<li>
+
+Adicionando uma lista de contatos no rodapé do site do exemplo explorado nesse artigo, seria:
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Matheus Barros</title>
+    </head>
+    <body>
+        <header>
+            <h1>Matheus Barros</h1>
+        </header>
+        <section>
+            <header>
+                <h2>Posts</h2>
+            </header>
+            <article>
+                <header>
+                    <h3>Post #1</h3>
+                </header>
+                <p>
+                    "TEXTO"
+                </p> 
+            </article>
+        </section>
+        <footer>
+            <ul>
+                <li>
+                    <a href="mailto:matheus_prais@outlook.com">matheus_prais@outlook.com</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/matheus-barros-7a1048204/" target="_blank">LinkedIn"</a>
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>
+
+O código HTML que descreve é:
+
+	<!DOCTYPE html>
+	<html>
+	    <head>
+	        <meta charset="utf-8">
+	        <title>Matheus Barros</title>
+	    </head>
+	    <body>
+	        <header>
+	            <h1>Matheus Barros</h1>
+	        </header>
+	        <section>
+	            <header>
+	                <h2>Posts</h2>
+	            </header>
+	            <article>
+	                <header>
+	                    <h3>Post #1</h3>
+	                </header>
+	                <p>
+	                    "TEXTO"
+	                </p> 
+	            </article>
+	        </section>
+	        <footer>
+	            <ul>
+	                <li>
+	                    <a href="mailto:matheus_prais@outlook.com">matheus_prais@outlook.com</a>
+	                </li>
+	                <li>
+	                    <a href="https://www.linkedin.com/in/matheus-barros-7a1048204/" target="_blank">LinkedIn"</a>
+	                </li>
+	            </ul>
+	        </footer>
+	    </body>
+	</html>
+##
+
+
+
 	
 
 

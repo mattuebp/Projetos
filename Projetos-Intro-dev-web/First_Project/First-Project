@@ -16,8 +16,20 @@
                 <header>
                     <h3>Post #1</h3>
                 </header>
+                <p>
+                    "TEXTO"
+                </p> 
             </article>
         </section>
-        <footer></footer>
+        <footer>
+            <ul>
+                <li>
+                    <a href="mailto:matheus_prais@outlook.com">matheus_prais@outlook.com</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/matheus-barros-7a1048204/" target="_blank">LinkedIn"</a>
+                </li>
+            </ul>
+        </footer>
     </body>
 </html>
