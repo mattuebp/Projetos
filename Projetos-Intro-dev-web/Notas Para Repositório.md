@@ -209,7 +209,7 @@ Adicionando uma lista de contatos no rodapé do site do exemplo explorado nesse 
                     <a href="mailto:matheus_prais@outlook.com">matheus_prais@outlook.com</a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/matheus-barros-7a1048204/" target="_blank">LinkedIn"</a>
+                    <a href="https://www.linkedin.com/in/matheus-barros-7a1048204/" target="_blank">LinkedIn</a>
                 </li>
             </ul>
         </footer>
@@ -247,7 +247,7 @@ O código HTML que descreve é:
 	                    <a href="mailto:matheus_prais@outlook.com">matheus_prais@outlook.com</a>
 	                </li>
 	                <li>
-	                    <a href="https://www.linkedin.com/in/matheus-barros-7a1048204/" target="_blank">LinkedIn"</a>
+	                    <a href="https://www.linkedin.com/in/matheus-barros-7a1048204/" target="_blank">LinkedIn</a>
 	                </li>
 	            </ul>
 	        </footer>
