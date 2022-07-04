@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex shrink</title>
+
+    <style>
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+        }
+
+        .items{
+            background-color: orangered;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+            color: white;
+        }
+
+        .s-3{
+            flex-shrink: 3;
+            flex-basis: 100px;
+        }
+
+        .s-2{
+            flex-shrink: 2;
+            flex-basis: 100px;
+        }
+
+        .s-1{
+            flex-shrink: 1;
+        }
+
+        .s-0{
+            flex-shrink: 0;
+            flex-basis: 200px;
+        }
+
+        .fg-1{
+            flex-grow: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- O flex-shrink (inverso do basis), estabelece a capacidade de compressão ou redução de cada item, estabelecendo uma unidade de referência
+    e fazendo a redução proporcional dos itens de multiplos dessa referência-->
+
+    <!-- Adicionado o flex-shrink em 1, conforme é feita a adição de novos items, é feita a compressão para que todos sejam abrigados dentro do container.
+    Neste caso, o volume de conteúdo é igual ou parecido em todos os itens.-->
+    <p>flex-shrink: 1</p>
+    <div class="flex-container">
+        <div class="items s-1 fg-1">A</div>
+        <div class="items s-1 fg-1">B</div>
+        <div class="items s-1 fg-1">C</div>
+        <div class="items s-1 fg-1">D</div>
+        <div class="items s-1 fg-1">E</div>
+    </div>
+
+    <!-- Comprimiu os itens menores, respeitando o espaço de texto de cada item e de forma proporcional. -->
+    <p>flex-shrink: 1</p>
+    <div class="flex-container">
+        <div class="items s-1 fg-1">A</div>
+        <div class="items s-1 fg-1">my momma called</div>
+        <div class="items s-1 fg-1">C</div>
+        <div class="items s-1 fg-1">D</div>
+    </div>
+
+    <!-- Foi feito a adição de um basis de 100px para o texto do conteúdo. Porém, utilizando o shrink em 0 (zero), não se permitiu a diminuição dos items.
+    O resultado foi o vazamento do container. -->
+    <p>flex-shrink: 0 / flex-basis: 100px. 
+    </p>
+    <div class="flex-container">
+        <div class="items s-0 fg-1">A</div>
+        <div class="items s-0 fg-1">my momma called</div>
+        <div class="items s-0 fg-1">seen you on tv son</div>
+        <div class="items s-0 fg-1">D</div>
+    </div>
+
+    <!-- Neste caso a compressão definida pelo shrink, é diferente em cada um dos items, portanto a compressão é feita de forma proporcionalemnte diferente,
+    e ainda tentando evitar o vazamento do container. Também é feita a tentativa do ajuste do basis de 100px.   -->
+    <p>flex-shrink: mix / flex-basis: 100px. 
+    </p>
+    <div class="flex-container">
+        <div class="items s-1 fg-1">A</div>
+        <div class="items s-2 fg-1">my momma called</div>
+        <div class="items s-2 fg-1">seen you on tv son</div>
+        <div class="items s-3 fg-1">D</div>
+    </div>
+</body>
+</html>

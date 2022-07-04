@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex basis</title>
+
+    <style>
+        .flex-container{
+            max-width: 500px;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .items{
+            background-color: coral;
+            color: white;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .bauto{
+            flex-basis: auto;
+        }
+
+        .b-0{
+            flex-basis: 0;
+        }
+
+        .fg-1{
+            flex-grow: 1;
+        }
+
+        .fg-2{
+            flex-grow: 2;
+        }
+
+        .w100{
+            flex-basis: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- O flex-basis prioriza e estabelece o tamanho mínimo que o item precisará ter, para que depois o flex grow possa ajustar os tamanhos de crescimento.-->
+
+    <!-- O flex basis ajusta o espaçamento do item, antes e depois do conteúdo, de acordo com o "tamanho base" do seu conteúdo.
+    Adicionando o flex grow, os itens se ajustam de foma a ocupar todo o espaço do container,
+    respeitando a regra de crescimento do flex-grow e também a regra de ocupação do conteúdo do flex-basis -->
+    <p>basis auto</p>
+    <div class="flex-container">
+        <div class="items bauto fg-1">A</div>
+        <div class="items bauto fg-1">BBB</div>
+        <div class="items bauto fg-1">C</div>
+        <div class="items bauto fg-1">DEF</div>
+    </div>
+
+    <!-- Com essa configuração, o flex-grow forçará o crescimento igual dos itens, até que o conteúdo base do item ocupe um certo volume.
+    A partir daí, o crescimento respeitará a ocupação dos itens mais volumosos e fará a compressão dos demais,
+    também respeitando o conteúdo mínimo. Caso não seja possível a compressão, os itens vazarão do container.  -->
+    <p>basis zero</p>
+    <div class="flex-container">
+        <div class="items b-0 fg-1">AAAAAAAAAAAAAA</div>
+        <div class="items b-0 fg-1">BBBBB</div>
+        <div class="items b-0 fg-1">C</div>
+        <div class="items b-0 fg-1">DEF</div>
+    </div>
+
+    <!-- Ajusta uma largura mínima de conteúdo base em cada ítem (100px nesse caso), Até que o conteúdo exceda essa largura mínima
+    (fazendo a compressão dos demais itens), depois faz o ajuste do espaçamento entre itens por meio da regra de crescimento do flex-grow.  -->
+    <p>basis + width</p>
+    <div class="flex-container">
+        <div class="items w100 fg-1">AAA</div>
+        <div class="items w100 fg-1">BBB</div>
+        <div class="items w100 fg-1">CCC</div>
+        <div class="items w100 fg-1">DEF</div>
+    </div>
+
+
+    
+</body>
+</html>
