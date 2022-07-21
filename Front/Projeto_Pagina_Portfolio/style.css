@@ -17,6 +17,8 @@ ul li a{
 div img{
     display: block;
     width: 100%;
+    border-radius: 50%;
+    max-width: 380px;
 }
 
 .flex-container{
@@ -53,7 +55,7 @@ header .menu{
 }
 
 .apresentacao{
-    height: 100vh;
+    height: 80vh;
     align-items: center;
     justify-content: space-between;
 }
@@ -78,39 +80,43 @@ header .menu{
     text-decoration: none;
     height: 50px;
     line-height: 50px;
-    margin-top: 10px;
+    margin-top: 30px;
     margin-bottom: 10px;
 }
 
-#quem-somos{
-    flex-direction: row-reverse;
+#sobre{
     align-items: center;
-    justify-content: space-between;
+    height: 30vh;
+    padding: 30px;
+
 }
 
-#quem-somos h2{
+#sobre h2{
     font-size: 32px;
-    color: #122a57;
+    color: white;
     display: flex;
     margin-bottom: 20px;
 }
 
-#quem-somos h2::before{
+#sobre h2::before{
     content: "";
     height: 50px;
     width: 5px;
     margin-right: 5px;
-    background-color: #122a57;
+    background-color: white;
     position: relative;
 }
 
-#quem-somos p{
+#sobre p{
     margin-bottom: 10px;
     width: 90%;
+    color: white;
+    text-align: justify;
 }
 
-#quem-somos img{
-    min-width: 420px;
+#sobre img{
+    max-width: 420px;
+    border-radius: 50%;
 }
 
 .container-externo{
@@ -118,33 +124,39 @@ header .menu{
     width: 100%;
 }
 
-#servicos{
+#exp-profissionais{
     flex-direction: column;
     padding-top: 50px;
     padding-bottom: 100px;
 }
 
-#servicos h2{
-    color: #fff;
+#exp-profissionais h2{
+    color: #122a57;
     font-size: 32px;
     margin-bottom: 20px;
+    text-align: center;
+    padding-bottom: 10px ;
 }
 
-#quem-somos img{
+#exp-profissionais img{
     min-width: 320px;
     margin: auto;
 }
 
-.list-servicos{
+.list-exp-profissionais{
     display: flex;
     justify-content: space-between;
 }
 
-.list-servicos .item-servico{
+.list-exp-profissionais .item-exp-profissionais{
     text-align: center;
 }
 
-.item-servico a{
+.item-exp-profissionais .descricao{
+    color: #fff;
+}
+
+.item-exp-profissionais a{
     width: 120px;
     background-color: #fff;
     border-radius: 30px;
@@ -158,14 +170,14 @@ header .menu{
     font-weight: 700;
 }
 
-.item-servico p{
+.item-exp-profissionais p{
     font-weight: 700;
     font-size: 18px;
     color: #fff;
     margin-top: 20px;
 }
 
-.item-servico img{
+.item-exp-profissionais img{
     width: 80%;
     margin: auto;
 }
@@ -174,19 +186,22 @@ header .menu{
     flex-direction: column;
     min-height: 100vh;
     padding-top: 50px;
+    align-items: center;
 }
 
 #planos h2{
     font-size: 32px;
+    margin-bottom: 30px ;
 }
 
 .list-planos{
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
 }
 
 .item-plano{
+    align-items: center;
     flex: 1;
     border: 5px solid #122a57;
     margin-right: 20px;
@@ -200,7 +215,7 @@ header .menu{
 }
 
 .item-plano h3{
-    font-size: 24px;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -264,7 +279,7 @@ footer .footer{
         width: 100%;
     }
 
-    #quem-somos{
+    #sobre{
         flex-direction: column-reverse;
     }
 
